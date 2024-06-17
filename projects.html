@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Projects</title>
+    <link rel="stylesheet" href="projects.css">
+    <link rel="icon" type="image/png" href="happy.png">
+</head>
+<body>
+  <header>
+    <h1>Projects</h1>
+  </header>
+
+  <!--Sidebar-->
+  <div id="sidebar">
+    <div id="handle">&#9776;</div>
+    <ul>
+        <li class="direction"><a href="home.html">Home</a></li>
+        <li class="direction"><a href="projects.html">Projects</a></li>
+        <li class="direction"><a href="experience.html">Experience</a></li>
+        <li class="direction"><a href="resume.html">Resume</a></li>
+    </ul>
+  </div>
+
+  <!--Top Half-->
+<div class="flex-containerOne">
+  <div class="project">
+    <button class="project-header">Project I - Operating System Simulation<span class="arrow">&#9654;</span></button>
+    <div class="project-content">
+      <p style="font-size: 20px;">C++</p>
+      <ul>
+        <li>Developed a comprehensive operating system simulation to mimic key OS functionalities</li>
+        <li>Utilized object-oriented programming principles for code modularity, maintainability, and extensibility</li>
+        <li>Implemented round-robin CPU scheduling, optimized memory management, process operations, and disk operations</li>
+        <li>Handled external errors to maintain system reliability and valid operations</li>
+      </ul>
+    </div>
+  </div>
+  <div class="project">
+    <button class="project-header">Project II - Be My Tutor<span class="arrow">&#9654;</span></button>
+    <div class="project-content">
+      <p style="font-size: 20px;">Python, Flask, HTML, CSS, Javascript</p>
+      <ul>
+        <li>Set-up a live map on a website containing 24/7 real-time updated information</li>
+        <li>Developed a user side form for tutors to register their profile through SQLAlchemy</li>
+        <li>Deployed a website using Flask for students to locate tutors available in their area</li>
+      </ul>
+    </div>
+  </div>
+  <div class="project">
+    <button class="project-header">Project III - Monster Escape<span class="arrow">&#9654;</span></button>
+    <div class="project-content">
+      <p style="font-size: 20px;">Unity, C#, Git</p>
+      <ul>
+        <li>Integrated immersive gameplay mechanics and interactive environments through Unity’s VR capabilities to enhance player experience</li>
+        <li>Maintained version control with Git to efficient collaboration and project integrity</li>
+        <li>Optimized performance and debugging, ensuring smooth and responsive gameplay across various VR hardware configurations</li>
+      </ul>
+    </div>
+  </div>
+  <div class="project">
+    <button class="project-header">Project IV - Portfolio Website<span class="arrow">&#9654;</span></button>
+    <div class="project-content">
+      <p style="font-size: 20px;">HTML, CSS, Javascript</p>
+      <ul>
+        <li>Compiled a web application to showcase personal projects</li>
+        <li>Utilized HTML, CSS, and JavaScript to provide a responsive design, ensuring consistent user experience across devices</li>
+        <li>Implemented a resume download feature for easy access, allowing visitors to quickly download and view my resume</li>
+        <li>Debugged technical and visual issues that occurred across multiple platforms</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+  <!--Bottom Half-->
+  <div class="flex-containerTwo">
+    <div class="contacts">
+      <a href="https://github.com/MysliwiecAdrian">
+        <img src="GITHUB.png" style="width:50px;" alt="Github link">
+      </a>
+    </div>
+    <div class="contacts">
+      <a href="https://www.linkedin.com/in/adrian-mysliwiec/">
+        <img src="LINKEDIN.png" style="width:50px;" alt="LinkedIn link">
+      </a>
+    </div>
+    <div class="contacts">
+      <a href="mailto:mysliwiec2003@gmail.com">
+        <img src="GMAIL.png" style="width:50px;" alt="Gmail">
+      </a>
+    </div>
+  </div>
+</body>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var acc = document.getElementsByClassName("project-header");
+    for (var i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        var arrow = this.children[0]; // Get the arrow span
+  
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+          arrow.style.transform = "rotate(0deg)"; // Arrow points right
+        } else {
+          panel.style.display = "block";
+          arrow.style.transform = "rotate(90deg)"; // Arrow points down
+        }
+  
+        // Close other open items
+        var allPanels = document.getElementsByClassName("project-content");
+        var allArrows = document.getElementsByClassName("arrow");
+        for (var j = 0; j < allPanels.length; j++) {
+          if (allPanels[j] !== panel) {
+            allPanels[j].style.display = "none";
+            allArrows[j].style.transform = "rotate(0deg)";
+            allPanels[j].previousElementSibling.classList.remove("active");
+          }
+        }
+      });
+    }
+  });
+  </script>
+</html>

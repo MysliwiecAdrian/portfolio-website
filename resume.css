@@ -1,0 +1,111 @@
+html {
+  height: 100%;
+}
+
+body {
+  font-family: Palatino, serif;
+  background-color: rgb(100, 121, 151);
+}
+
+h1 {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  padding-right: 80px;
+}
+
+#sidebar {
+  position: fixed;
+  left: -250px; /* Sidebar width */
+  width: 250px;
+  height: 100%;
+  background: #333;
+  transition: left 0.3s;
+  z-index: 1000;
+  margin-top: -100px;
+}
+
+#handle {
+  position: absolute;
+  left: 100%; /* Position the handle right at the edge of the sidebar */
+  top: 0;
+  width: 20px; /* Width of the handle */
+  height: 100%;
+  background: #666; /* Different color to make it noticeable */
+  text-align: center;
+  line-height: 100vh; /* Align the icon vertically */
+  cursor: pointer;
+  color: white; /* Icon color */
+}
+
+#sidebar:hover {
+  left: 0;
+}
+
+#sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.direction:hover{
+  font-weight: bold;
+}
+
+#sidebar ul li a {
+  display: block;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid #444;
+}
+
+.flex-containerOne {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1100px;
+  flex-direction: column;
+  margin-top: 100px;
+}
+
+
+#downloadable-resume {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: rgb(112, 112, 141);
+  font-size: 20px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+#downloadable-resume a {
+  color: white;
+  text-decoration: none;
+}
+
+#downloadable-resume:hover {
+  background-color: rgb(133, 133, 161);
+  transform: scale(1.01);
+}
+
+.flex-containerTwo{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 60px;
+}
+
+.contacts {
+  width: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.contacts:hover{
+  transform: scale(1.1);
+}
