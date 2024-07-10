@@ -28,13 +28,47 @@ h2 {
   margin-top: 100px;
 }
 
-.flex-containerTwo{
+.flex-containerTwo {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  align-items: flex-end;
-  height: 410px;
-  margin-top: 50px;
+  align-items: center;
+  position: fixed;   /* Change from sticky to fixed */
+  bottom: 10px;      /* Position it 10px from the bottom of the viewport */
+  right: 10px;       /* Position it 10px from the right of the viewport */
+  background-color: rgba(100, 121, 151, 0.95); /* Optional background color */
+  padding: 10px;     /* Add some padding around the content */
+  border-radius: 10px; /* Optional border radius for aesthetics */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3); /* Optional shadow for better visibility */
+  z-index: 1000;     /* Ensure it's above other content */
+}
+
+
+.flex-containerThree {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 700px;
+  margin-top: 100px;
+}
+
+.flex-containerFour {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 800px;
+  position: relative;
+  margin-top: 100px;
+}
+
+.flex-containerFive {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1100px;
+  flex-direction: column;
+  margin-top: 100px;
 }
 
 .contacts {
@@ -106,4 +140,137 @@ h2 {
   color: white;
   text-decoration: none;
   border-bottom: 1px solid #444;
+}
+
+.project {
+  width: 40%; /* Adjust based on your preference */
+  border: 1px solid black;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+  margin-top: 130px;
+}
+
+.project-header {
+  padding: 10px 20px;
+  width: 100%;
+  text-align: left;
+  background-color: rgb(112, 112, 141);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.project-header:hover {
+  background-color: rgb(133, 133, 161);
+}
+
+.project-content {
+  padding: 0 20px;
+  display: none;
+  overflow: hidden;
+  background-color: rgb(112, 112, 141);
+  text-align: left;
+}
+
+.project-content p {
+  margin-bottom: 0px;
+  margin-top: 4px;
+}
+
+.project-content ul {
+  margin-top: 4px;
+}
+
+.arrow {
+  float: right;
+  transition: transform 0.3s ease;
+}
+
+.project-header.active .arrow {
+  transform: rotate(90deg); /* Rotates the arrow 90 degrees when active */
+}
+
+.experience {
+  position: relative;
+  width: 300px; /* Increased initial size */
+  height: 300px; /* Increased initial size */
+  border-radius: 50%;
+  border: 2px solid black;
+  transition: transform 0.5s ease;
+  cursor: pointer;
+}
+
+.experience-header {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: rgb(112, 112, 141);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  z-index: 1;
+}
+
+.experience-content {
+  position: absolute;
+  transform: translate(-50%, -50%) scale(0); /* Center and hide initially */
+  width: 500px; /* Fixed width when expanded */
+  height: 300px; /* Fixed height when expanded */
+  background-color: rgb(112, 112, 141);
+  transition: transform 1s ease, opacity 1s ease;
+  align-items: center;
+  font-size: 16px;
+  border-radius: 10px; /* Less rounded corners for the rectangle */
+  padding: 30px;
+  box-sizing: border-box;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.experience:nth-child(1) .experience-content {
+  left: 200%; /* Starts from the center of the circle */
+  top: 50%;
+  transform-origin: left center; /* Expand rightwards */
+}
+
+.experience:nth-child(2) .experience-content {
+  right: 40%; /* Starts from the center of the circle */
+  top: 50%;
+  transform-origin: right center; /* Expand leftwards */
+}
+
+.experience:hover .experience-content {
+  transform: translate(-50%, -50%) scale(1); /* Expand and show */
+  opacity: 1;
+}
+
+.experience:hover {
+  transform: scale(1.2); /* Enlarge the circle slightly on hover */
+  z-index: 2; /* Make sure it's above other content */
+}
+
+#downloadable-resume {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: rgb(112, 112, 141);
+  font-size: 20px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+#downloadable-resume a {
+  color: white;
+  text-decoration: none;
+}
+
+#downloadable-resume:hover {
+  background-color: rgb(133, 133, 161);
+  transform: scale(1.01);
 }
