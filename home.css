@@ -1,10 +1,14 @@
-html {
-  height: 100%;
-}
 
-body {
+
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  scroll-snap-type: y mandatory; /* Enable vertical snapping */
+  overflow-y: scroll; /* Allow vertical scrolling */
   font-family: Palatino, serif;
   background-color: rgb(100, 121, 151);
+  scrollbar-width: none;
 }
 
 h1 {
@@ -14,97 +18,35 @@ h1 {
   padding-right: 80px;
 
 }
-h2 {
-  font-size: 72px;
-  margin: 0px;
-}
 
-.flex-containerOne{
+
+.section {
+  height: 100vh; /* Each section fills the viewport vertically */
+  scroll-snap-align: start; /* Align the start of the section with the viewport start */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 700px;
-  margin-top: 100px;
 }
 
-.flex-containerTwo {
+.sectionExperience{
+  height: 100vh; /* Each section fills the viewport vertically */
+  scroll-snap-align: start; /* Align the start of the section with the viewport start */
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  position: fixed;   /* Change from sticky to fixed */
-  bottom: 10px;      /* Position it 10px from the bottom of the viewport */
-  right: 10px;       /* Position it 10px from the right of the viewport */
-  background-color: rgba(100, 121, 151, 0.95); /* Optional background color */
-  padding: 10px;     /* Add some padding around the content */
-  border-radius: 10px; /* Optional border radius for aesthetics */
-  box-shadow: 0 4px 6px rgba(0,0,0,0.3); /* Optional shadow for better visibility */
-  z-index: 1000;     /* Ensure it's above other content */
-}
-
-
-.flex-containerThree {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  height: 700px;
-  margin-top: 100px;
-}
-
-.flex-containerFour {
-  display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 800px;
-  position: relative;
-  margin-top: 100px;
 }
-
-.flex-containerFive {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 1100px;
-  flex-direction: column;
-  margin-top: 100px;
-}
-
-.contacts {
-  width: 50px;
-  margin-left: 10px;
-  margin-right: 10px;
-  cursor: pointer;
-}
-
-.contacts:hover{
-  transform: scale(1.1);
-}
-
-#pfp {
-  width: 400px;
-  border-radius: 50%;
-  border: 5px solid rgb(0, 0, 0);
-}
-
-#about {
-  margin: 5px;
-  width: 500px;
-  font-size: 30px;
-  text-align: center;
-}
-
 
 #sidebar {
   position: fixed;
-  left: -250px; /* Sidebar width */
+  left: -250px;
   width: 250px;
   height: 100%;
   background: #333;
   transition: left 0.3s;
   z-index: 1000;
-  margin-top: -100px;
+  padding-top: 20px; /* Padding to avoid overlap with the top of the browser */
 }
 
 #handle {
@@ -130,10 +72,6 @@ h2 {
   margin: 0;
 }
 
-.direction:hover{
-  font-weight: bold;
-}
-
 #sidebar ul li a {
   display: block;
   padding: 10px;
@@ -141,6 +79,49 @@ h2 {
   text-decoration: none;
   border-bottom: 1px solid #444;
 }
+
+.direction:hover {
+  font-weight: bold;
+}
+
+.flex-containerTwo {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  position: fixed;   /* Change from sticky to fixed */
+  bottom: 10px;      /* Position it 10px from the bottom of the viewport */
+  right: 10px;       /* Position it 10px from the right of the viewport */
+  background-color: rgba(100, 121, 151, 0.95); /* Optional background color */
+  padding: 10px;     /* Add some padding around the content */
+  border-radius: 10px; /* Optional border radius for aesthetics */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3); /* Optional shadow for better visibility */
+  z-index: 1000;     /* Ensure it's above other content */
+}
+
+.contacts {
+  width: 50px;
+  height: 50px; /* Ensure the icons have a specific size */
+  margin: 0 5px; /* Space out the icons a bit */
+}
+
+.contacts:hover{
+  transform: scale(1.1);
+}
+
+#pfp {
+  width: 300px; /* Adjusted width for better responsiveness */
+  border-radius: 50%;
+  border: 5px solid rgb(0, 0, 0);
+}
+
+#about {
+  width: 80%; /* Responsive width adjustment */
+  font-size: 24px; /* Smaller font size for better readability on all devices */
+  text-align: center;
+  padding: 20px; /* Added padding for better spacing */
+}
+
 
 .project {
   width: 40%; /* Adjust based on your preference */
@@ -273,4 +254,26 @@ h2 {
 #downloadable-resume:hover {
   background-color: rgb(133, 133, 161);
   transform: scale(1.01);
+}
+
+.dot-navigation {
+  position: fixed;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  z-index: 2000;
+}
+
+.dot {
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: #bbb;
+  margin: 5px 0;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: #ffffff; /* Change the color when active */
 }
