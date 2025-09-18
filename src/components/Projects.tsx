@@ -7,30 +7,30 @@ import { ExternalLink, Github } from "lucide-react";
 const projects = [
   {
     id: 1,
-    title: "E-Commerce Platform",
-    description: "A full-stack e-commerce solution with modern UI, secure payments, and admin dashboard.",
-    image: "https://images.unsplash.com/photo-1705417272217-490f4511abeb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjB3b3Jrc3BhY2UlMjBkZXNrJTIwc2V0dXB8ZW58MXx8fHwxNzU3NTIyMDM3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+    title: "Unordinary - AI Powered Calendar",
+    description: "A web application designed to help busy individuals maintain their hobbies through intelligent, AI-driven scheduling.",
+    image: "https://github.com/KaziMansha/Unordinary/blob/main/src/assets/Unordinary_Mission.png?raw=true",
+    technologies: ["React", "TypeScript", "Node.js", "PostgreSQL", "GroqAI"],
     liveUrl: "#",
-    githubUrl: "#"
+    githubUrl: "https://github.com/KaziMansha/Unordinary"
   },
   {
     id: 2,
-    title: "Mobile App Design",
-    description: "User-centered mobile app design with interactive prototypes and comprehensive design system.",
-    image: "https://images.unsplash.com/photo-1678667720699-5c0fc04ac166?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBkZXNpZ24lMjBtb2NrdXB8ZW58MXx8fHwxNzU3NTkzMjM5fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    technologies: ["Figma", "React Native", "TypeScript", "Expo"],
+    title: "Campus Management System",
+    description: "User-centered web app that allows students/faculty to browse CUNY campuses and enroll/unenroll students into the database.",
+    image: "https://media.istockphoto.com/id/1386672473/photo/businessman-using-a-computer-to-document-management-concept-online-documentation-database-and.jpg?s=612x612&w=0&k=20&c=c3IDkl2DDJkUKrH1z7fPqw4XXoIn7CfaS14DK8xGqJQ=",
+    technologies: ["React", "Node.js", "PostgreSQL", "Express.js"],
     liveUrl: "#",
-    githubUrl: "#"
+    githubUrl: "https://github.com/HanzDG/project-client-side"
   },
   {
     id: 3,
-    title: "Web Development Dashboard",
+    title: "Operating System Simulation",
     description: "Analytics dashboard with real-time data visualization and advanced filtering capabilities.",
-    image: "https://images.unsplash.com/photo-1742072594003-abf6ca86e154?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMGNvZGluZyUyMHNjcmVlbnxlbnwxfHx8fDE3NTc1NzgyNTd8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    technologies: ["Next.js", "D3.js", "PostgreSQL", "TailwindCSS"],
+    image: "https://media.gettyimages.com/id/1226017761/video/flying-through-binary-code-blue-loopable-animation-computer-software-artificial-intelligence.jpg?s=640x640&k=20&c=BcGrMCUYslT9o8Md-X6P7uB0noq56rG0FdEbqe7cBhA=",
+    technologies: ["C++"],
     liveUrl: "#",
-    githubUrl: "#"
+    githubUrl: "https://github.com/MysliwiecAdrian/os-simulation"
   }
 ];
 
@@ -81,13 +81,13 @@ export function Projects() {
                 </CardContent>
 
                 <CardFooter className="flex gap-2">
-                  <Button size="sm" variant="outline" className="flex-1">
+                  {/* <Button size="sm" variant="outline" className="flex-1">
                     <ExternalLink className="w-4 h-4 mr-2" />
                     Live Demo
-                  </Button>
+                  </Button> */}
                   <Button size="sm" variant="outline" className="flex-1">
                     <Github className="w-4 h-4 mr-2" />
-                    Code
+                      <a href={project.githubUrl}>Code</a>
                   </Button>
                 </CardFooter>
               </Card>
@@ -97,7 +97,7 @@ export function Projects() {
           {/* View More Button */}
           <div className="text-center mt-12">
             <Button variant="outline" size="lg">
-              View All Projects
+              <a href="https://github.com/MysliwiecAdrian?tab=repositories">View All Projects</a>
             </Button>
           </div>
         </div>

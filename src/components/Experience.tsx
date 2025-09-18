@@ -5,64 +5,78 @@ import { CalendarDays, MapPin } from "lucide-react";
 const experiences = [
   {
     id: 1,
-    title: "Senior Full Stack Developer",
-    company: "Tech Solutions Inc.",
-    location: "San Francisco, CA",
-    period: "2022 - Present",
-    description: "Led development of scalable web applications serving 100K+ users. Mentored junior developers and implemented CI/CD pipelines.",
+    title: "Adjunct Lecturer",
+    company: "CUNY Hunter College",
+    location: "Manhattan, NY",
+    period: "Sept. 2025 - Present",
+    description: "Educate multiple sections of Software Analysis & Design I (C++) in Object Oriented Principles.",
     achievements: [
-      "Improved application performance by 40%",
-      "Led team of 5 developers",
-      "Implemented microservices architecture"
+      "Improve student work completion and grades by 40%",
+      "Collaborate with the lead professor and team of 20+ teaching assistants",
+      "Grade, proctor, and tutor students to support mastery of the course"
     ],
-    technologies: ["React", "Node.js", "AWS", "PostgreSQL", "Docker"]
+    technologies: ["C++", "OOP", "Software Analysis", "Software Design"]
   },
   {
     id: 2,
-    title: "Frontend Developer",
-    company: "Digital Agency Co.",
-    location: "New York, NY",
-    period: "2020 - 2022",
-    description: "Developed responsive web applications and collaborated with design teams to create pixel-perfect implementations.",
+    title: "Software Engineering Intern",
+    company: "Unadat",
+    location: "New York City, NY",
+    period: "June 2025 - August 2025",
+    description: "Built new features for the financial wellness SaaS platform to encompass multi-purpose usage.",
     achievements: [
-      "Delivered 15+ client projects on time",
-      "Reduced code bundle size by 30%",
-      "Implemented accessibility standards"
+      "Improve communications between testers and case managers by 15%",
+      "Achieved 100% completion of ticket goals over the course of multiple Agile sprints",
+      "Led a team of 10 members"
     ],
-    technologies: ["React", "TypeScript", "Sass", "Webpack", "Jest"]
+    technologies: ["PHP", "HTML", "CSS", "Javascript", "SQL", "Google Cloud"]
   },
   {
     id: 3,
-    title: "Junior Web Developer",
-    company: "StartUp Hub",
-    location: "Austin, TX",
-    period: "2019 - 2020",
-    description: "Built and maintained company websites, learned modern development practices, and contributed to open-source projects.",
+    title: "Software Developer Intern",
+    company: "Memorial Sloan Kettering",
+    location: "Manhattan, NY",
+    period: "June 2024 - August 2024",
+    description: "Built and maintained features that were core to patient experience during a transitional period to new technologies.",
     achievements: [
-      "Built 10+ responsive websites",
-      "Learned modern JavaScript frameworks",
-      "Contributed to team code reviews"
+      "Implemented responsive features for Remote Monitoring",
+      "Improve doctor-patient communication efficiency for over 70,000+ patients",
+      "Collaborated in cross-function Agile teams utilizing version control for project deployment"
     ],
-    technologies: ["HTML", "CSS", "JavaScript", "WordPress", "Git"]
+    technologies: ["React", "JavaScript", "SQL", "Outsystems", "Github", "Agile"]
+  },
+  {
+    id: 4,
+    title: "Frontend Developer",
+    company: "Pharmaspectra",
+    location: "Manhattan, NY",
+    period: "June 2021 - August 2021",
+    description: "Established a new support portal for employees utilizing Zendesk Chatbot AI.",
+    achievements: [
+      "Provided a new centralized ticket system to assist 250+ employees",
+      "Integrated Zendesk API to boost automated support engagement by 35%",
+      "Reduced resolution time for tickets by 40%"
+    ],
+    technologies: ["HTML", "CSS", "JavaScript", "Zendesk API", "Github"]
   }
 ];
 
 const education = [
   {
     id: 1,
-    degree: "Bachelor of Science in Computer Science",
-    school: "University of Technology",
-    location: "California, USA",
-    period: "2015 - 2019",
-    description: "Focused on software engineering, algorithms, and data structures. Graduated Magna Cum Laude."
+    degree: "Bachelor of Arts in Computer Science",
+    school: "CUNY Hunter College",
+    location: "Manhattan, NYC",
+    period: "2021 - 2025",
+    description: "Focused on software engineering, algorithms, and data structures. Graduated Magna Cum Laude. Minor in Sociology. Thomas Hunter Honors Program."
   },
   {
     id: 2,
-    degree: "Full Stack Web Development Bootcamp",
-    school: "Code Academy",
-    location: "Online",
-    period: "2019",
-    description: "Intensive 6-month program covering modern web development technologies and best practices."
+    degree: "Bachelor of Arts in Economics",
+    school: "CUNY Hunter College",
+    location: "Manhattan, NYC",
+    period: "2021 - 2025",
+    description: "Focused on global economics, public policy, and real-world mathematical applications. Graduated Manga Cum Laude. Minor in Sociology. Thomas Hunter Honors Program."
   }
 ];
 

@@ -37,17 +37,17 @@ const skillCategories = [
       { name: "Prototyping", level: 90 }
     ]
   },
-  {
-    id: 4,
-    title: "Mobile Development",
-    icon: <Smartphone className="w-6 h-6" />,
-    skills: [
-      { name: "React Native", level: 85 },
-      { name: "Flutter", level: 75 },
-      { name: "iOS Development", level: 70 },
-      { name: "Android Development", level: 72 }
-    ]
-  },
+  // {
+  //   id: 4,
+  //   title: "Mobile Development",
+  //   icon: <Smartphone className="w-6 h-6" />,
+  //   skills: [
+  //     { name: "React Native", level: 85 },
+  //     { name: "Flutter", level: 75 },
+  //     { name: "iOS Development", level: 70 },
+  //     { name: "Android Development", level: 72 }
+  //   ]
+  // },
   {
     id: 5,
     title: "Cloud & DevOps",
@@ -120,7 +120,7 @@ export function Skills() {
           </div>
 
           {/* Certifications */}
-          <div className="text-center">
+          {/* <div className="text-center">
             <h3 className="text-2xl mb-8">Certifications</h3>
             <div className="flex flex-wrap justify-center gap-3">
               {certifications.map((cert) => (
@@ -129,7 +129,7 @@ export function Skills() {
                 </Badge>
               ))}
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

@@ -6,21 +6,21 @@ const contactInfo = [
     id: 1,
     icon: <Mail className="w-5 h-5" />,
     label: "Email",
-    value: "your.email@example.com",
-    href: "mailto:your.email@example.com"
+    value: "mysliwiec2003@gmail.com",
+    href: "mailto:mysliwiec2003@gmail.com"
   },
-  {
-    id: 2,
-    icon: <Phone className="w-5 h-5" />,
-    label: "Phone",
-    value: "+1 (555) 123-4567",
-    href: "tel:+15551234567"
-  },
+  // {
+  //   id: 2,
+  //   icon: <Phone className="w-5 h-5" />,
+  //   label: "Phone",
+  //   value: "+1 (555) 123-4567",
+  //   href: "tel:+15551234567"
+  // },
   {
     id: 3,
     icon: <MapPin className="w-5 h-5" />,
     label: "Location",
-    value: "San Francisco, CA",
+    value: "New York City, NY",
     href: "#"
   }
 ];
@@ -30,20 +30,20 @@ const socialLinks = [
     id: 1,
     icon: <Github className="w-5 h-5" />,
     label: "GitHub",
-    href: "https://github.com/yourusername"
+    href: "https://github.com/MysliwiecAdrian"
   },
   {
     id: 2,
     icon: <Linkedin className="w-5 h-5" />,
     label: "LinkedIn",
-    href: "https://linkedin.com/in/yourusername"
+    href: "https://www.linkedin.com/in/adrian-mysliwiec/"
   },
-  {
-    id: 3,
-    icon: <Twitter className="w-5 h-5" />,
-    label: "Twitter",
-    href: "https://twitter.com/yourusername"
-  }
+  // {
+  //   id: 3,
+  //   icon: <Twitter className="w-5 h-5" />,
+  //   label: "Twitter",
+  //   href: "https://twitter.com/yourusername"
+  // }
 ];
 
 export function Footer() {
@@ -144,10 +144,10 @@ export function Footer() {
           {/* Bottom Bar */}
           <div className="border-t border-border pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
             <p className="text-muted-foreground text-sm">
-              © {currentYear} Your Name. All rights reserved.
+              © {currentYear} Adrian Mysliwiec. All rights reserved.
             </p>
             <div className="flex items-center gap-1 text-sm text-muted-foreground">
-              Made with <Heart className="w-4 h-4 text-red-500 fill-current" /> using React & Tailwind
+              Made using React & Tailwind
             </div>
           </div>
         </div>
