@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Progress } from "./ui/progress";
-import { Code2, Palette, Database, Globe, Smartphone, Settings } from "lucide-react";
+import { Code2, Palette, Database, Globe, FileCode, Settings } from "lucide-react";
 
 const skillCategories = [
   {
@@ -9,10 +9,10 @@ const skillCategories = [
     title: "Frontend Development",
     icon: <Code2 className="w-6 h-6" />,
     skills: [
-      { name: "React/Next.js", level: 95 },
-      { name: "TypeScript", level: 90 },
-      { name: "HTML/CSS", level: 98 },
-      { name: "Tailwind CSS", level: 92 }
+      { name: "React/Next.js", level: 85 },
+      { name: "TypeScript", level: 80 },
+      { name: "HTML/CSS", level: 95 },
+      { name: "Tailwind CSS", level: 79 }
     ]
   },
   {
@@ -23,7 +23,7 @@ const skillCategories = [
       { name: "Node.js", level: 88 },
       { name: "Python", level: 82 },
       { name: "PostgreSQL", level: 85 },
-      { name: "MongoDB", level: 80 }
+      { name: "SQL", level: 80 }
     ]
   },
   {
@@ -31,43 +31,43 @@ const skillCategories = [
     title: "Design & UX",
     icon: <Palette className="w-6 h-6" />,
     skills: [
-      { name: "Figma", level: 92 },
-      { name: "Adobe Creative Suite", level: 85 },
+      { name: "Figma", level: 84 },
       { name: "UI/UX Design", level: 88 },
-      { name: "Prototyping", level: 90 }
+      { name: "Prototyping", level: 80 },
+      { name: "Miro", level: 82}
+    ]
+  },
+  {
+    id: 4,
+    title: "Object Oriented Programming",
+    icon: <FileCode className="w-6 h-6" />,
+    skills: [
+      { name: "C++", level: 93 },
+      { name: "C", level: 70 },
+      { name: "Java", level: 72 },
+      { name: "PHP", level: 75 }
     ]
   },
   // {
-  //   id: 4,
-  //   title: "Mobile Development",
-  //   icon: <Smartphone className="w-6 h-6" />,
+  //   id: 5,
+  //   title: "Cloud & DevOps",
+  //   icon: <Globe className="w-6 h-6" />,
   //   skills: [
-  //     { name: "React Native", level: 85 },
-  //     { name: "Flutter", level: 75 },
-  //     { name: "iOS Development", level: 70 },
-  //     { name: "Android Development", level: 72 }
+  //     { name: "AWS", level: 82 },
+  //     { name: "Docker", level: 85 },
+  //     { name: "CI/CD", level: 88 },
+  //     { name: "Kubernetes", level: 75 }
   //   ]
   // },
-  {
-    id: 5,
-    title: "Cloud & DevOps",
-    icon: <Globe className="w-6 h-6" />,
-    skills: [
-      { name: "AWS", level: 82 },
-      { name: "Docker", level: 85 },
-      { name: "CI/CD", level: 88 },
-      { name: "Kubernetes", level: 75 }
-    ]
-  },
   {
     id: 6,
     title: "Tools & Others",
     icon: <Settings className="w-6 h-6" />,
     skills: [
-      { name: "Git", level: 95 },
-      { name: "Jest/Testing", level: 85 },
-      { name: "Webpack", level: 80 },
-      { name: "GraphQL", level: 78 }
+      { name: "Git", level: 84 },
+      { name: "Agile", level: 92 },
+      { name: "Jira/Linear", level: 80 },
+      { name: "Outsystems", level: 78 }
     ]
   }
 ];
