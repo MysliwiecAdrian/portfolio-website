@@ -1,9 +1,27 @@
 import { Button } from "./ui/button";
-import { Menu, X } from "lucide-react";
-import { useState } from "react";
+import { Menu, X, Moon, Sun } from "lucide-react";
+import { useState, useEffect } from "react";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  // Initialize dark mode from localStorage or system preference
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme');
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const shouldBeDark = savedTheme === 'dark' || (!savedTheme && systemPrefersDark);
+    
+    setIsDarkMode(shouldBeDark);
+    document.documentElement.classList.toggle('dark', shouldBeDark);
+  }, []);
+
+  const toggleDarkMode = () => {
+    const newDarkMode = !isDarkMode;
+    setIsDarkMode(newDarkMode);
+    document.documentElement.classList.toggle('dark', newDarkMode);
+    localStorage.setItem('theme', newDarkMode ? 'dark' : 'light');
+  };
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -47,12 +65,21 @@ export function Header() {
             >
               Skills
             </button>
-            <Button 
-              onClick={() => scrollToSection('contact')}
-              variant="default"
-            >
-              Contact
-            </Button>
+            <div className="flex items-center space-x-2">
+              <Button 
+                onClick={toggleDarkMode}
+                variant="ghost"
+                size="icon"
+              >
+                {isDarkMode ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+              </Button>
+              <Button 
+                onClick={() => scrollToSection('contact')}
+                variant="default"
+              >
+                Contact
+              </Button>
+            </div>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -94,13 +121,22 @@ export function Header() {
               >
                 Skills
               </button>
-              <Button 
-                onClick={() => scrollToSection('contact')}
-                variant="default"
-                className="w-fit"
-              >
-                Contact
-              </Button>
+              <div className="flex items-center space-x-2">
+                <Button 
+                  onClick={toggleDarkMode}
+                  variant="ghost"
+                  size="icon"
+                >
+                  {isDarkMode ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+                </Button>
+                <Button 
+                  onClick={() => scrollToSection('contact')}
+                  variant="default"
+                  className="w-fit"
+                >
+                  Contact
+                </Button>
+              </div>
             </div>
           </nav>
         )}
