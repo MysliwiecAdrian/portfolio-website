@@ -54,7 +54,7 @@ export function Hero() {
             <div className="flex justify-center">
               <div className="relative">
                 <ImageWithFallback
-                  src="https://media.licdn.com/dms/image/v2/C4D03AQHKgQFC8UoHrQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1595919312869?e=1760572800&v=beta&t=lTeG9xSqVnbuHeuJT8nL4IuI2uiRVJu7nspS8hBkAcI"
+                  src="https://media.licdn.com/dms/image/v2/C4D03AQHKgQFC8UoHrQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1595919312869?e=1778112000&v=beta&t=j8wGxUiZ0FUXBoUxYr0O72vI8mlx64A-iygkanha13U"
                   alt="Professional headshot"
                   className="w-80 h-80 object-cover rounded-full shadow-2xl"
                 />
